@@ -1,0 +1,19 @@
+<div class="card mb-3 animated fadeIn" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 align-self-center">
+      <img [src]="hero.imagePath" class="img-fluid rounded-start" [alt]="hero.name">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ hero.name }}</h5>
+        <p class="card-text">{{ hero.biography | slice:0:98}} ...</p>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-primary"
+                  [routerLink]="['/heroes/detail', hero.id]">
+            See more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

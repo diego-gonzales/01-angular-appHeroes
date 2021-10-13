@@ -1,0 +1,17 @@
+<ng-container *ngIf="!matchingHeroes.length; else elseTemplate">
+  <div class="alert alert-primary my-5 text-center">
+    Not found results. Try searching another keyword.
+  </div>
+</ng-container>
+
+<ng-template #elseTemplate>
+  <div class="row my-5 justify-content-center">
+    <div class="col-md-6 col-lg-4"
+         *ngFor="let hero of matchingHeroes">
+
+      <app-hero-card [hero]="hero"></app-hero-card>
+
+    </div>
+  </div>
+</ng-template>
+

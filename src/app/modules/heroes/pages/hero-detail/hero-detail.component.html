@@ -1,0 +1,22 @@
+<div *ngIf="hero" class="mt-4 animated fadeIn">
+  <h1>{{ hero.name }} ({{ hero.aparitionDate | date:'yyyy'}})</h1>
+  <div class="row mt-4">
+    <div class="col-md-6 pb-5">
+      <img [src]="hero.imagePath" [alt]="hero.name">
+    </div>
+    <div class="col-md-6 mt-4">
+      <h3 class="mb-4">Biography</h3>
+      <p>{{ hero.biography }}</p>
+      <div class="d-flex justify-content-between pb-5">
+        <img [src]="setHomeImage()" [alt]="hero.home" class="home-image">
+        <div class="align-self-center">
+          <button class="btn btn-success"
+                  type="button"
+                  (click)="back()">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
