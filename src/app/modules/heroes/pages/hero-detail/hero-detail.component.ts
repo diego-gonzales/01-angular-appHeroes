@@ -36,9 +36,10 @@ export class HeroDetailComponent implements OnInit {
         });
   };
 
-  setHomeImage() {
-    return (this.hero.home === 'Marvel') ? 'assets/images/marvel.png' : 'assets/images/dc.png';
-  };
+  /* It was replaced for a Pipe */
+  // setHomeImage() {
+  //   return (this.hero.home === 'Marvel') ? 'assets/images/marvel.png' : 'assets/images/dc.png';
+  // };
 
   back() {
     window.history.back();
